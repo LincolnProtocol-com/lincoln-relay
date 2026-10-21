@@ -4,7 +4,7 @@ Relay service for the [Lincoln](https://docs.lincolnprotocol.com/token/tokenomic
 
 A relay receives a proof that a user generated in their own wallet, checks it against the chain, and submits the transaction from the relay's address so the user never has to fund a public wallet. The pools bind `processor`, `recipient`, `feeRecipient`, `fee` and the amounts into the proof, so a relay cannot redirect funds, change the fee, or replay a proof under a different address. The worst a relay can do is refuse or delay a job; the user then proves again for another relay.
 
-- Operator guide: [English](https://docs.lincolnprotocol.com/token/relay-operators) · [中文](https://docs.lincolnprotocol.com/token/zh/relay-operators)
+- Operator guide: https://docs.lincolnprotocol.com/token/relay-operators
 - Contracts, circuits and the public release: [Lincoln-protocol-core](https://github.com/LincolnProtocol-com/Lincoln-protocol-core)
 
 ## What is in this repository
