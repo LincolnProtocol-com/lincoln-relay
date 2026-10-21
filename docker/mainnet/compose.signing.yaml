@@ -1,0 +1,17 @@
+# Opt-in only AFTER separately approved mainnet gas limits + production validation.
+# Runtime JSON must ALSO enable the chosen role and supply its immutable budget.
+# Bind files must be mode 0600, UID 10001. Compose secrets default to mode 0444 and
+# therefore cannot satisfy createCastKeystoreSigner's owner/mode checks.
+services:
+  api:
+    environment:
+      LINCOLN_MAINNET_SIGNING_ENABLED: "${LINCOLN_MAINNET_RELAY_SIGNING_ENABLED:-0}"
+    volumes:
+      - {type: bind, source: "${LINCOLN_MAINNET_RELAY_KEYSTORE_FILE:?Set encrypted relay keystore file}", target: /run/secrets/mainnet-relay.keystore.json, read_only: true, bind: {create_host_path: false}}
+      - {type: bind, source: "${LINCOLN_MAINNET_RELAY_PASSWORD_FILE:?Set relay password file outside repository}", target: /run/secrets/mainnet-relay.password, read_only: true, bind: {create_host_path: false}}
+  asp:
+    environment:
+      LINCOLN_MAINNET_SIGNING_ENABLED: "${LINCOLN_MAINNET_ASP_SIGNING_ENABLED:-0}"
+    volumes:
+      - {type: bind, source: "${LINCOLN_MAINNET_PROVIDER_KEYSTORE_FILE:?Set encrypted provider keystore file}", target: /run/secrets/mainnet-provider.keystore.json, read_only: true, bind: {create_host_path: false}}
+      - {type: bind, source: "${LINCOLN_MAINNET_PROVIDER_PASSWORD_FILE:?Set provider password file outside repository}", target: /run/secrets/mainnet-provider.password, read_only: true, bind: {create_host_path: false}}

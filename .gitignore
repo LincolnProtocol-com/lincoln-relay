@@ -1,0 +1,7 @@
+node_modules/
+.phase1-private/
+*.password
+*.keystore
+keystore*.json
+.env*
+*.log

@@ -1,0 +1,26 @@
+{
+  "schema": "phase1-container-image-pins/v1",
+  "checkedAtUTC": "2026-10-15",
+  "node": {
+    "image": "node:24.22.0-bookworm-slim",
+    "indexDigest": "sha256:a5f4366e834695d5f363b920c104953a535d3a9864d1bdf74566a0ebe01daee5",
+    "amd64Digest": "sha256:ec857ea6bb60cb3d0fa4d97495590c5fe7d51be8572c307b55957eeb06569cf7",
+    "arm64Digest": "sha256:156e9bc7a0a267cc6ca77b4283e32b123479342df684ce297455d7b95ff5a6b5",
+    "source": "https://raw.githubusercontent.com/docker-library/official-images/master/library/node"
+  },
+  "foundry": {
+    "image": "ghcr.io/foundry-rs/foundry:v1.8.4",
+    "indexDigest": "sha256:f69e1b8d1dda17d89227a4d0513b1d86f93ece430dea8d87aaea643da3607d3e",
+    "amd64Digest": "sha256:82939a6ec5e9a2e0e89d6adf91080c0f1727d7378c7e079c049b4ec4c3caf97c",
+    "arm64Digest": "sha256:d507b1e8e886d40a1ed71906714e9d149e21f0e3952c349b2bcba2d9081a39fe",
+    "source": "https://github.com/foundry-rs/foundry/releases/tag/v1.8.4",
+    "copiedBinaryOnly": "/usr/local/bin/cast"
+  },
+  "verification": {
+    "registryManifestDigestsChecked": true,
+    "dockerBuildExecuted": false,
+    "containerRunExecuted": false,
+    "node24MacOSServiceTestsPassed": 105,
+    "node24LinuxRuntimeCompatibilityEstablished": false
+  }
+}

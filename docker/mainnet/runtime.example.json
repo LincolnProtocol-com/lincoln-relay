@@ -1,0 +1,19 @@
+{
+  "schema": "lincoln-mainnet-container/v1",
+  "chainId": 4663,
+  "rpcUrl": "https://rpc.mainnet.chain.robinhood.com/",
+  "governanceSafe": "0x9CF17a6E3c75D200f58283A165C442a8A3994555",
+  "profileFile": "mainnet-deployed.json",
+  "poolIds": ["eth"],
+  "relay": {"address": null, "enabled": false, "budgetWei": null, "maxFeePerGasWei": null, "reserveWei": null, "maxGas": "5000000"},
+  "asp": {"address": null, "enabled": false, "budgetWei": null, "maxFeePerGasWei": null, "reserveWei": null, "maxGas": "500000"},
+  "publisher": {
+    "policy": "all-current-notes",
+    "originScreening": false,
+    "intervalSeconds": 60,
+    "publication": {"lifetimeSeconds": 604800, "renewalWindowSeconds": 86400, "minPublishIntervalSeconds": 900, "confirmations": 2, "maxCommitments": 10000}
+  },
+  "network": {"allowedHosts": ["127.0.0.1", "localhost"], "allowedOrigins": []},
+  "serviceFeesFile": null,
+  "feeArtifactsFile": null
+}
